@@ -51,14 +51,6 @@ p {
     transition-duration: .2s;
 }
 
-p:hover {
-    color: darkblue;
-}
-
-p:active {
-    color: blue;
-}
-
 body {
     margin-block: 0px;
 }
@@ -110,7 +102,7 @@ a.sm:active img.sm {
     border-radius: 12px;
 }
 
-figcaption.sm {
+span.sm {
     max-width: 98px;
     padding: 4px;
     padding-left: 6px;
