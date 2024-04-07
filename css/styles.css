@@ -21,7 +21,7 @@ nav {
     padding: 8px;
 }
 
-nav a {
+nav a,.dropdown {
     background-color: darkgray;
     margin-inline: 8px;
     padding: 16px;
@@ -69,6 +69,33 @@ article {
     background-color: snow;
 }
 
+.dropdown {
+    display: inline-block;
+}
+
+.hoveron {
+    display: block;
+
+}
+
+.drop-options {
+    display: none;
+    position: absolute;
+}
+
+.drop-options a {
+    display: block;
+    border-radius: 0;
+}
+
+.drop-options a:hover {
+    background-color: lightslategray;
+}
+
+.dropdown:hover .drop-options {
+    display: inline-block;
+}
+
 section.gallery {
     max-width: 224px;
     margin-inline: auto; 
@@ -102,16 +129,6 @@ a.sm:active img.sm {
     border-radius: 12px;
 }
 
-span.sm {
-    max-width: 98px;
-    padding: 4px;
-    padding-left: 6px;
-    padding-top: 0px;
-    font-size: 12px;
-    color: white;
-    display: flex;
-    flex: content;
-}
 
 a.sm {
     display: flex;
@@ -134,4 +151,20 @@ a.sm:active {
     background-color: hsl(0, 0%, 47%);
 }
 
+span.sm {
+    max-width: 98px;
+    padding: 4px;
+    padding-left: 6px;
+    padding-top: 0px;
+    font-size: 12px;
+    color: white;
+    display: flex;
+    flex: content;
+}
+
+footer a {
+    display: flex;
+    max-width: 80%;
+    margin: auto;
+}
 /*Comment*/
