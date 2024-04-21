@@ -1,0 +1,166 @@
+@import './variables';
+@import './mixins';
+
+@font-face {
+    font-family: exo2-reg;
+    src: url(../font/Exo2-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: exo2-i;
+    src: url(../font/Exo2-Italic-VariableFont_wght.ttf);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'exo2-reg', Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: map-get($color, alt-secondary);
+}
+
+header, footer {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    justify-content: space-between;
+    background-color: map-get($color, secondary);
+    z-index: 1;
+
+    h1 {
+        margin: auto 16px;
+        cursor: default;
+        color: map-get($color, txt-secondary);
+    }
+    nav {
+        display: flex;
+        
+        #hamburger {
+            font-size: 48px;
+            padding-left: 8px;
+            padding-right: 8px;
+            font-family: Arial, Helvetica, sans-serif
+        }
+        a {
+            @include btn();
+            margin: 8px 8px 8px 0px;
+        }
+        #links {
+            background-color: map-get($color, secondary);
+            padding-left: 8px;
+
+            display: none;
+            position: absolute;
+            right: 0px;
+            top: 50px;
+    
+            a {
+                padding: 8px;
+            }
+        }
+    }    
+}
+footer {
+    position: relative;
+    background-color: map-get($color, primary);
+}
+#breadcrumbs {
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 6px;
+    border-top-left-radius: 8px;
+    background-color: map-get($color, secondary);
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    z-index: 2;
+
+    a {
+        &:hover {
+            background-color: map-get($color, alt-secondary);
+            color: map-get($color, accent);
+        }
+    }
+}
+#top {
+    height: 46px;
+}
+#cta {
+    @include btn;
+    margin-bottom: 16px;
+    box-shadow: 0px 1px 2px #000;
+    background: linear-gradient(to bottom, map-get($color, accent) 0%, map-get($color, alt-secondary) 20%, map-get($color, alt-secondary) 85%, map-get($color, accent) 100%);
+}
+main {
+    background-color: map-get($color, primary);
+    color: map-get($color, txt-primary);
+    width: 100%;
+    display: flex;
+    div.spacer {
+        flex: 1;
+        background-color: map-get($color, alt-secondary);
+    }
+    section {
+        margin-left: 16px;
+        display: flex;
+        flex-direction: column;
+        flex: 4;
+        padding: 24px;
+    }
+    h2 {
+        margin-bottom: 8px;
+    }
+    h3 {
+        margin-bottom: 4px;
+    }
+    p {
+        margin-bottom: 16px;
+    }
+
+    a {
+        text-decoration: none;
+        color: map-get($color, alt-secondary);
+
+        &:hover {
+            text-decoration: underline;
+            color: map-get($color, secondary);
+        }
+    }
+    footer {
+        nav {
+            a {
+                @include btn;
+            }
+        }
+    }
+}
+@media (min-width: 1200px) {
+    main {
+        section {
+            flex: 2;
+            max-width: 700px;
+        }
+        .div.spacer {
+            flex: 2;
+        }
+    }
+}
+@media (max-width: 520px) {
+    main {
+        section {
+            flex: 1;
+        }
+        div.spacer {
+            flex: 0;
+        }
+    }
+    #breadcrumbs {
+        display: none;
+    }
+}

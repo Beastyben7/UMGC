@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preprocessing</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header>
+        <h1>Preprocessing</h1>
+        <nav>
+            <a id="hamburger" href="#">=</a>
+            <div id="links">
+                <a href="../index.html">Home</a>
+                <a href="project3.html">Project 3</a>
+            </div>
+        </nav>
+    </header>
+    <nav id="breadcrumbs">
+        <a href="../index.html">index</a>
+        /
+        <a href="project3.html">project3.html</a>
+    </nav>
+    <div id="top"></div>
+    <main>
+        <div class="spacer"></div>
+        <section>
+        <h2>Implementation of Preprocessing</h2>
+        <p>Preprocessing is the term used to describe the translation of developer-use CSS into web-use CSS. There are a few ways to implement preprocessing into CSS. The two major CSS preprocessors are <a href="https://sass-lang.com/">SASS</a> and <a href="https://lesscss.org/">LESS</a>. After choosing one, you must install the files onto your computer. Once this is complete, you are mostly ready to begin coding with it. A VS Code plugin called "<a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass">Live SASS Compile</a>" allows for the CSS to automatically compile when I save my .scss (SASS) files. By using this plugin, I was able to save time by not needing to manually type commands into the console.</p>
+
+        <h2>Mechanisms of SASS Preprocessing</h2>
+        <p>From a development perspective, using SASS or LESS to develop CSS for their websties allows for a quicker and more flexible workflow. Both SASS and traditional CSS have very similar syntax, but SASS introduces new ways of typing the same thing. One can do this through the use of nesting and by use of variables. Traditionally, you would need to create a new line of CSS for the base element, then new lines for every form of that element. A new line would need to be created for diferent states, such as when the element is being hovered over. Similarly, if you wanted to change the CSS of an element within a certain element, you'd need to list it all out specifically. In SASS, you can simply add new CSS within that element by using "&" before the next level, such as :hover or a nested element.</p>
+            <section>
+                <h3>Variables</h3>
+                <p>Setting variables allows for long-term flexibility if overarching changes need to be made. For example, if you want to set a brand shade of red, you could make it a variable like this: $brand-red. When you change the value of the variable, it will carry those changes all throughout the code where it is being used.</p>
+                <h3>Mixin and Include</h3>
+                <p>Using "@mixin" allows multiple lines of CSS to be saved and used in future code. These mixin styles can then be called later and used with "@include". In many ways, you could think of a mixin as a link to include many styles.</p>
+                <h3>Functions</h3>
+                <p>Functions can be used in numerous ways throughout SASS. The function is first defined like this "function()". Within the parenthesis, the developer can input variables for processing. If there is more than one variable, each will be separated by a comma. The developer then defines the output by declaring how the variables will be processed. In the compiled CSS, the function will be replaced by the output of the function.</p>                        
+                <h3>Operators</h3>
+                <p>Just like standard math, operators in SASS include plus (+), minus (-), multiply (*), and divide (/). Additionnally, there is an unusual operator called "modulus." It is represented by a percentage sign (%). Modulus divides indegers as many times as possible and gives the remainder. For example, 7 % 3 = 1. Three goes into seven twice, and there is one left. Operators also include these: equal to (==), not equal to (!=), greater than (>), greater than or equal to (>=), and the less than alternates. There are also the boolean terms: "and", "or" and "not".</p>
+                <h3>Nesting</h3>
+                <p>Nesting allows developers to save time by nesting CSS for sub-elements or pseudo-classes directly into their parent element's CSS. Traditionally you'd need to create a whole new line of CSS selecting the full route from the parent to its sub-elements. By directly nesting within the parent CSS, we can save time while also promoting readability.</p>
+            </section>
+        <h2>Client-Side Vs Server-Side Preprocessing</h2>
+        <p>Both client-side and server-side preprocessing have their advantages and disadvantages. Here are the differences:</p>
+            <section>
+                <h3>Client-Side</h3>
+                <p>This processing happens within a user's web browser. Typically, these include processing HTML, CSS, and JavaScript.</p>
+                <h3>Server-Side</h3>
+                <p>The server-side processing happens on the servers that are hosting the website. These processes are more interactive and responsive to user activity and requests.</p>           
+            </section>
+        <footer><nav><a id="back-to-top" href="#top">Back to Top</a></nav></footer>
+        </section>
+        <div class="spacer"></div>
+    </main>
+
+    <script src="js/scripts.js"></script>
+</body>
+<!--
+    How I implemented SASS: 
+    I did all of my coding within VS code. I found a plugin that automatically compiles the SCSS to CSS upon file save. Even if I peviously did not have an original main.css file, the compiler would create that new file and update it on every save. I also used a few external files, such as for variables and mixins. By doing this, I cleared up my view for the important key styles. Using SCSS really saved me a lot of time, and it was much more intuitive that standard CSS in my opinion. It all came naturally to me once I understood the syntax.
+
+    Here is my SCSS:
+        @import './variables';  (I have copied my _variables.scss file here)
+            $color: (
+                "primary": #EADFB4,
+                "secondary": #9BB0C1,
+                "alt-secondary": #51829B,
+                "accent": #F6995C,
+
+                "txt-primary": black,
+                "txt-secondary": white,
+                "txt-alt-secondary": white,
+            );
+        @import './mixins';  (I have copied my _mixins.scss file here)
+            @mixin btn {
+                display: flex;
+                align-items: center;
+                padding-top: 8px;
+                padding-bottom: 8px;
+                padding-left: 16px;
+                padding-right: 16px;
+                background-color: map-get($color, alt-secondary);
+                color: map-get($color, accent);
+                text-decoration: none;
+                font-weight: 600;
+                border-radius: 4px;
+                width: fit-content;
+
+                &:hover {
+                    outline: 2px solid map-get($color, accent);
+                }
+            }
+
+        @font-face {
+            font-family: exo2-reg;
+            src: url(../font/Exo2-VariableFont_wght.ttf);
+        }
+        @font-face {
+            font-family: exo2-i;
+            src: url(../font/Exo2-Italic-VariableFont_wght.ttf);
+        }
+
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: 'exo2-reg', Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: map-get($color, alt-secondary);
+        }
+
+        header, footer {
+            display: flex;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 50px;
+            justify-content: space-between;
+            background-color: map-get($color, secondary);
+            z-index: 1;
+
+            h1 {
+                margin: auto 16px;
+                cursor: default;
+                color: map-get($color, txt-secondary);
+            }
+            nav {
+                display: flex;
+                
+                #hamburger {
+                    font-size: 48px;
+                    padding-left: 8px;
+                    padding-right: 8px;
+                    font-family: Arial, Helvetica, sans-serif
+                }
+                a {
+                    @include btn();
+                    margin: 8px 8px 8px 0px;
+                }
+                #links {
+                    background-color: map-get($color, secondary);
+                    padding-left: 8px;
+
+                    display: none;
+                    position: absolute;
+                    right: 0px;
+                    top: 50px;
+            
+                    a {
+                        padding: 8px;
+                    }
+                }
+            }    
+        }
+        footer {
+            position: relative;
+            background-color: map-get($color, primary);
+        }
+        #breadcrumbs {
+            position: fixed;
+            right: 0px;
+            bottom: 0px;
+            padding-left: 4px;
+            padding-right: 4px;
+            padding-bottom: 6px;
+            border-top-left-radius: 8px;
+            background-color: map-get($color, secondary);
+            border-top: 2px solid black;
+            border-left: 2px solid black;
+            z-index: 2;
+
+            a {
+                &:hover {
+                    background-color: map-get($color, alt-secondary);
+                    color: map-get($color, accent);
+                }
+            }
+        }
+        #top {
+            height: 46px;
+        }
+        #cta {
+            @include btn;
+            margin-bottom: 16px;
+            box-shadow: 0px 1px 2px #000;
+            background: linear-gradient(to bottom, map-get($color, accent) 0%, map-get($color, alt-secondary) 20%, map-get($color, alt-secondary) 85%, map-get($color, accent) 100%);
+        }
+        main {
+            background-color: map-get($color, primary);
+            color: map-get($color, txt-primary);
+            width: 100%;
+            display: flex;
+            div.spacer {
+                flex: 1;
+                background-color: map-get($color, alt-secondary);
+            }
+            section {
+                margin-left: 16px;
+                display: flex;
+                flex-direction: column;
+                flex: 4;
+                padding: 24px;
+            }
+            h2 {
+                margin-bottom: 8px;
+            }
+            h3 {
+                margin-bottom: 4px;
+            }
+            p {
+                margin-bottom: 16px;
+            }
+
+            a {
+                text-decoration: none;
+                color: map-get($color, alt-secondary);
+
+                &:hover {
+                    text-decoration: underline;
+                    color: map-get($color, secondary);
+                }
+            }
+            footer {
+                nav {
+                    a {
+                        @include btn;
+                    }
+                }
+            }
+        }
+        @media (min-width: 1200px) {
+            main {
+                section {
+                    flex: 2;
+                    max-width: 700px;
+                }
+                .div.spacer {
+                    flex: 2;
+                }
+            }
+        }
+        @media (max-width: 520px) {
+            main {
+                section {
+                    flex: 1;
+                }
+                div.spacer {
+                    flex: 0;
+                }
+            }
+            #breadcrumbs {
+                display: none;
+            }
+        }
+-->
+</html>
