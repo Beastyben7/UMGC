@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" href="imgs/favicon/favicon.ico">
+    <meta name="keywords" content="login forgot password create account">
+    <meta name="description" content="Login to your account.">
+    <meta name="author" content="Benjamin Smith">
+    <meta name="robots" content="all">
+    <meta name="copyright" content="Copyright © 2024 RentRawr">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/create-account.css">
+    <script src="https://kit.fontawesome.com/8bd26b406d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="frsb">
+        <a id="homenav" href="explore-properties.html"><span id="rent">Rent</span><span id="rawr">Rawr</span><a><!--Logo/Home Navigator-->
+        <nav>
+            <!--Messages(dropdown)-->
+            <a id="msgLink" href="#"><i class="fa-regular fa-message"></i></a>
+            <div id="msgPreviews" class="menu">
+                <a href="messages.html">view all mesages</a>
+                <div class="msg-preview">preview1</div>
+                <div class="msg-preview">preview2</div>
+                <div class="msg-preview">preview3</div>
+            </div>
+            <!--Account Relevant Menu-->
+            <a id="accountLink" href="#"><i class="fa-regular fa-user"></i></a>
+            <div id="accountMenu" class="menu">
+                <a id="loginBtn" class="btn" href="login.html">Login</a><!--Login-->
+                <a id="createAccount" class="btn" href="create-account.html">Create Account</a>
+                <a id="profileContainer" href="account.html"><img src="imgs/user/profile-photo.jpg" alt="profile photo" width="100%"></a><!--Account (Picture Link only if logged in)-->
+                <a id="settings" class="btn" href="settings.html">Settings</a><!--Settings(only if logged in)-->
+                <a id="logOut" class="btn" href="login.hmtl">Log Out</a><!--Log Out (only if logged in)-->
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div id="background"></div>
+        <div id="formArea">
+            <h1>Login</h1>
+            <form id="formLogin" action="explore-properties.html" method="get" novalidate>
+                <div class="inputArea">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="johndoe@example.com">
+                </div>
+                <div class="inputArea">
+                    <label for="password">Password</label>
+                    <input id="password" name="password" type="password" placeholder="*****************" required>
+                </div>
+                <div class="inputArea">
+                    <input id="submit" type="submit" value="Login">
+                </div>
+                <p>Don't have an account? <a href="create-account.html">create one</a></p>
+
+            </form>
+        </div>
+    </main>
+    <footer>This is the footer</footer>
+    <script src="./js/main.js"></script>
+    <script src="./js/login.js"></script>
+</body>
+</html>

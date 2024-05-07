@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Request</title>
+    <link rel="icon" href="imgs/favicon/favicon.ico">
+    <meta name="keywords" content="rental maintainence work request fix repair">
+    <meta name="description" content="Submit a work request if your rental property has an issue. Your landlord will be notified and will message you.">
+    <meta name="author" content="Benjamin Smith">
+    <meta name="robots" content="all">
+    <meta name="copyright" content="Copyright © 2024 RentRawr">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/account.css">
+    <link rel="stylesheet" href="./styles/work-req.css">
+    <script src="https://kit.fontawesome.com/8bd26b406d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="frsb">
+        <a id="homenav" href="explore-properties.html"><span id="rent">Rent</span><span id="rawr">Rawr</span><a><!--Logo/Home Navigator-->
+        <nav>
+            <!--Messages(dropdown)-->
+            <a id="msgLink" href="messages.html"><i class="fa-regular fa-message"></i></a>
+            <!--Account Relevant Menu-->
+            <a id="accountLink" href="#"><i class="fa-regular fa-user"></i></a>
+            <div id="accountMenu" class="menu">
+                <a id="loginBtn" class="btn" href="login.html">Login</a>
+                <a id="createAccount" class="btn" href="create-account.html">Create Account</a>
+
+                <div id="userFName" class="userData"></div>
+                <div id="userLName" class="userData"></div>
+
+                <a id="toAccount" class="btn" href="account.html">Account</a>
+
+                <a id="settings" class="btn" href="settings.html">Settings</a>
+                <a id="logOut" class="btn" href="login.html">Log Out</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <aside id="accountLinkArea">
+            <div id="userPhoto"></div>
+            <div id="links">
+                <a id="myProperty" class="links" href="account.html">My Property</a>
+                <a id="workReq" class="links" href="work-request.html">Submit Work Request</a>
+                <a id="settings" class="links" href="settings.html">Settings</a>
+            </div>
+        </aside>
+        <!---------------------------->
+        <section>
+            <h1>Submit Work Request</h1>
+            <form action="thank-you.html">
+                <div>
+                    <label for="reqTitle">Title of Request</label>
+                    <input type="text">
+                </div>
+                <div>
+                    <label for="reqDetails">Details</label>
+                    <textarea name="reqDetails" id="reqDetails" rows="10"></textarea>
+                </div>
+                <div>
+                    <label for="reqMedia">Attach Files</label>
+                    <input type="file" multiple>
+                </div>
+                <input id="workReqSubmit" type="submit">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <nav>
+            <a href="../index.html">Index</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+        </nav>
+        <div id="currentTime">this is the time</div>
+    </footer>
+    <script src="./js/main.js"></script>
+    <script src="./js/account.js"></script>
+    <script src="./js/work-req.js"></script>
+
+</body>
+</html>

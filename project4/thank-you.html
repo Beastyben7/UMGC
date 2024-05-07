@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <link rel="icon" href="imgs/favicon/favicon.ico">
+    <meta name="keywords" content="thanks submitted complete form">
+    <meta name="description" content="Your form has been submitted. Go back to your original page.">
+    <meta name="author" content="Benjamin Smith">
+    <meta name="robots" content="all">
+    <meta name="copyright" content="Copyright © 2024 RentRawr">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/create-account.css">
+    <link rel="stylesheet" href="styles/thank-you.css">
+    <script src="https://kit.fontawesome.com/8bd26b406d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="frsb">
+        <a id="homenav" href="explore-properties.html"><span id="rent">Rent</span><span id="rawr">Rawr</span><a><!--Logo/Home Navigator-->
+        <nav>
+            <!--Messages(dropdown)-->
+            <a id="msgLink" href="messages.html"><i class="fa-regular fa-message"></i></a>
+            <!--Account Relevant Menu-->
+            <a id="accountLink" href="#"><i class="fa-regular fa-user"></i></a>
+            <div id="accountMenu" class="menu">
+                <a id="loginBtn" class="btn" href="login.html">Login</a><!--Login-->
+                <a id="createAccount" class="btn" href="create-account.html">Create Account</a>
+                <div id="userFName" class="userData"></div>
+                <div id="userLName" class="userData"></div>
+
+                <a id="toAccount" class="btn" href="account.html">Account</a>
+                <a id="settings" class="btn" href="settings.html">Settings</a><!--Settings(only if logged in)-->
+                <a id="logOut" class="btn" href="login.html">Log Out</a><!--Log Out (only if logged in)-->
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div id="background"></div>
+        <div id="thanks">
+            <h1>Thank You</h1>
+            <h2>Your request has been submitted.</h2>
+            <a href="account.html">Go Back</a>
+        </div>
+    </main>
+    <footer>This is the footer</footer>
+    <script src="./js/main.js"></script>
+    <script src="./js/login.js"></script>
+    <script src="./js/account.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Details</title>
+    <link rel="icon" href="imgs/favicon/favicon.ico">
+    <meta name="keywords" content="information rental details">
+    <meta name="description" content="Get details on a selected rental property to find more information.">
+    <meta name="author" content="Benjamin Smith">
+    <meta name="robots" content="all">
+    <meta name="copyright" content="Copyright © 2024 RentRawr">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/property-details.css">
+    <script src="https://kit.fontawesome.com/8bd26b406d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="frsb">
+        <a id="homenav" href="explore-properties.html"><span id="rent">Rent</span><span id="rawr">Rawr</span><a><!--Logo/Home Navigator-->
+        <nav>
+            <!--Messages(dropdown)-->
+            <a id="msgLink" href="messages.html"><i class="fa-regular fa-message"></i></a>
+            <!--Account Relevant Menu-->
+            <a id="accountLink" href="#"><i class="fa-regular fa-user"></i></a>
+            <div id="accountMenu" class="menu">
+                <a id="loginBtn" class="btn" href="login.html">Login</a>
+                <a id="createAccount" class="btn" href="create-account.html">Create Account</a>
+
+                <div id="userFName" class="userData"></div>
+                <div id="userLName" class="userData"></div>
+
+                <a id="toAccount" class="btn" href="account.html">Account</a>
+
+                <a id="settings" class="btn" href="settings.html">Settings</a>
+                <a id="logOut" class="btn" href="login.html">Log Out</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="propertyDetails">
+            <div id="imageArea">
+                <img id="mainImage" src="" alt="main image"></img>
+                <div id="allImages">
+                    <img id="img1" src="" alt="property image 1" onclick="toMainImg(1)">
+                    <img id="img2" src="" alt="property image 2" onclick="toMainImg(2)">
+                    <img id="img3" src="" alt="property image 3" onclick="toMainImg(3)">
+                    <img id="img4" src="" alt="property image 4" onclick="toMainImg(4)">
+                    <img id="img5" src="" alt="property image 5" onclick="toMainImg(5)">
+                </div>
+            </div>
+
+            <div id="propertyInfo">
+                <h1 id="$homeType"></h1>
+                <h2 id="$rent"></h2>
+                <h2 id="$sqft"></h2>
+                <h2 id="$rooms">Rooms
+                    <h3 id="$bedrooms"></h3>
+                    <h3 id="$bathrooms"></h3>
+                    <h3 id="$kitchens"></h3>
+                    <h3 id="$livingrooms"></h3>
+                </h2>
+                <p id="$info"></p>
+                <div id="$petPolicy">
+                    <div id="$cats"></div>
+                    <div id="$dogs"></div>
+                </div>
+                <div id="$temp">
+                    <div id="hot"></div>
+                    <div id="cold"></div>
+                </div>
+                <div id="$amenities"></div>
+            </div>
+            <a id="contactOwner" href="messages.html">Contact Owner</a>
+        </section>
+    </main>
+    <footer>
+        <nav>
+            <a href="../index.html">Index</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+        </nav>
+        <div id="currentTime">this is the time</div>
+    </footer>
+    <script src="./js/main.js"></script>
+    <script src="./js/property-details.js"></script>
+    
+</body>
+</html>

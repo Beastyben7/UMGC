@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Properties</title>
+    <link rel="icon" href="imgs/favicon/favicon.ico">
+    <meta name="keywords" content="rent map find filter home apartment search">
+    <meta name="description" content="Rent Rawr matches your preferences with available properties to find your next rental home. After agreement, Rent Rawr provides the tools to manage your relationship with your landlord, simplifying communication, and connecting you with the help you need.">
+    <meta name="author" content="Benjamin Smith">
+    <meta name="robots" content="all">
+    <meta name="copyright" content="Copyright © 2024 RentRawr">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/explore-properties.css">
+    <script src="https://kit.fontawesome.com/8bd26b406d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="frsb">
+        <a id="homenav" href="explore-properties.html"><span id="rent">Rent</span><span id="rawr">Rawr</span><a><!--Logo/Home Navigator-->
+        <nav>
+            <div id="notifications" class="menu">
+                <div class="notification">Notification1</div>
+                <div class="notification">Notification2</div>
+                <div class="notification">Notification3</div>
+                <div class="notification">Notification4</div>
+            </div>
+            <!--Messages(dropdown)-->
+            <a id="msgLink" href="messages.html"><i class="fa-regular fa-message"></i></a>
+            <!--Account Relevant Menu-->
+            <a id="accountLink" href="#"><i class="fa-regular fa-user"></i></a>
+            <div id="accountMenu" class="menu">
+                <a id="loginBtn" class="btn" href="login.html">Login</a>
+                <a id="createAccount" class="btn" href="create-account.html">Create Account</a>
+
+                <div id="userFName" class="userData"></div>
+                <div id="userLName" class="userData"></div>
+
+                <a id="toAccount" class="btn" href="account.html">Account</a>
+
+                <a id="settings" class="btn" href="settings.html">Settings</a>
+                <a id="logOut" class="btn" href="login.html">Log Out</a>
+            </div>
+        </nav>
+    </header>
+    <main id="explore-properties">
+        <aside id="filters">
+            <!--Rent-->
+            <a id="filterRent" href="#">
+                <div>Rent</div>
+                <div>▼</div>
+            </a>
+            <div id="dropdownRent">
+                <input type="text" class="rentbox"> - <input type="text" class="rentbox">
+            </div>
+            <!--Home Type-->
+            <a id="filterHomeType" href="#">
+                <div>Home Type</div>
+                <div>▼</div>
+            </a>
+            <div id="dropdownHomeType">
+                <div class="filter-item">
+                    <label for="home-type">Appartment</label>
+                    <input type="radio" id="home-type" name="home-type">
+                </div>
+                <div class="filter-item">
+                    <label for="home-type">House</label>
+                    <input type="radio" id="home-type" name="home-type">
+                </div>
+                <div class="filter-item">
+                    <label for="home-type">Duplex</label>
+                    <input type="radio" id="home-type" name="home-type">
+                </div>
+                <div class="filter-item">
+                    <label for="home-type">Mansion</label>
+                    <input type="radio" id="home-type" name="home-type">
+                </div>
+                <div class="filter-item">
+                    <label for="home-type">Dorm</label>
+                    <input type="radio" id="home-type" name="home-type">
+                </div>
+            </div>
+            <!--Temperature-->
+            <a id="filterTemp" href="#">
+                <div>Temperature</div>
+                <div>▼</div>
+            </a>
+            <div id="dropdownTemp">
+                <div class="filter-item">
+                    <label for="ac">Air Conditioning</label>
+                    <input type="checkbox" id="ac">
+                </div>
+                <div class="filter-item">
+                    <label for="heat">Heating</label>
+                    <input type="checkbox" id="heat">
+                </div>
+            </div>
+            <!--Pets-->
+            <a id="filterPets" href="#">
+                <div>Pets</div>
+                <div>▼</div>
+            </a>
+            <div id="dropdownPets">
+                <div class="filter-item">
+                    <label for="cats">Cats Allowed</label>
+                    <input type="checkbox" id="cats">
+                </div>
+                <div class="filter-item">
+                    <label for="dogs">Dogs Allowed</label>
+                    <input type="checkbox" id="dogs">
+                </div>
+            </div>
+            <!--Amenities-->
+            <a id="filterAmenities" href="#">
+                <div>Amenities</div>
+                <div>▼</div>
+            </a>
+            <div id="dropdownAmenities">
+                <div class="filter-item">
+                    <label for="laundry">Laundry</label>
+                    <input type="checkbox" id="laundry">
+                </div>
+                <div class="filter-item">
+                    <label for="Pool">Pool</label>
+                    <input type="checkbox" id="Pool">
+                </div>
+                <div class="filter-item">
+                    <label for="Waterfront">Waterfront</label>
+                    <input type="checkbox" id="Waterfront">
+                </div>
+            </div>
+        </aside>
+        <!--MAP-->
+        <div id="map-container">
+            <div id="map">
+                <img src="imgs/map_dallas.png" width="2500px" alt="Map of Dallas">
+                <div class="pin-overlay">
+                    <a class="pin" href=""></a>
+                    <a class="pin" href=""></a>
+                    <a class="pin" href=""></a>
+                    <a class="pin" href=""></a>
+                    <a class="pin" href=""></a>
+                    <a class="pin" href=""></a>
+                    <a class="pin" href=""></a>
+                    <a class="pin" href=""></a>
+                </div>
+            </div>
+            <div class="search">
+                <form action="">
+                    <input id="searchbar" type="address" placeholder="Dallas TX...">
+                    <input type="submit" name="submit" id="submit" value="Search">
+                </form>
+            </div>
+            <a id="filterClose" href="#">◄</a>
+            <a id="resultsClose" href="#">►</a>
+        </div>
+        <aside id="resultsContainer">
+            <div id="resultCount"><b>8 Results</b></div>
+            <div id="results">
+                <div class="resultCard" id="1" onclick="toProperty(1)">
+                    <div class="imgContainer">
+                        <img src="imgs/property/1/img1.jpg" width="100%" alt="Property Image Preview">
+                        <a href="#"><i class="fa-regular fa-bookmark"></i></a>
+                    </div>
+                    <div class="cardUpper">
+                        <div class="price">$1,200/mo</div>
+                        <div>
+                            <div>
+                                2<i class="fa-solid fa-bed"></i>
+                            </div>
+                            <div>
+                                2<i class="fa-solid fa-sink"></i>
+                            </div>
+                            <div>
+                                2<i class="fa-solid fa-utensils"></i>
+                            </div>
+                            <div>
+                                2<i class="fa-solid fa-couch"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lower">
+                        <div class="home-type">Apartment</div>
+                        <div class="sqft">2,300sqft</div>
+                    </div>
+                </div>
+                <div class="resultCard" id="2" onclick="toProperty(2)">
+                    <div class="imgContainer">
+                        <img src="imgs/property/2/img1.jpg" width="100%" alt="Property Image Preview">
+                        <a href="#"><i class="fa-regular fa-bookmark"></i></a>
+                    </div>
+                    <div class="cardUpper">
+                        <div class="price">$1,400/mo</div>
+                        <div>
+                            <div>
+                                2<i class="fa-solid fa-bed"></i>
+                            </div>
+                            <div>
+                                3<i class="fa-solid fa-sink"></i>
+                            </div>
+                            <div>
+                                1<i class="fa-solid fa-utensils"></i>
+                            </div>
+                            <div>
+                                2<i class="fa-solid fa-couch"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lower">
+                        <div class="home-type">Apartment</div>
+                        <div class="sqft">2,300sqft</div>
+                    </div>
+                </div>
+                <div class="resultCard" id="3" onclick="toProperty(3)">
+                    <div class="imgContainer">
+                        <img src="imgs/property/3/img1.jpg" width="100%" alt="Property Image Preview">
+                        <a href="#"><i class="fa-regular fa-bookmark"></i></a>
+                    </div>
+                    <div class="cardUpper">
+                        <div class="price">$3,700/mo</div>
+                        <div>
+                            <div>
+                                1<i class="fa-solid fa-bed"></i>
+                            </div>
+                            <div>
+                                2<i class="fa-solid fa-sink"></i>
+                            </div>
+                            <div>
+                                1<i class="fa-solid fa-utensils"></i>
+                            </div>
+                            <div>
+                                3<i class="fa-solid fa-couch"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lower">
+                        <div class="home-type">Luxury Apartment</div>
+                        <div class="sqft">2,560sqft</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+    <footer>
+        <nav>
+            <a href="../index.html">Index</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+        </nav>
+        <div id="currentTime">this is the time</div>
+    </footer>
+    <script src="./js/main.js"></script>
+    <script src="./js/explore-properties.js"></script>
+
+</body>
+</html>

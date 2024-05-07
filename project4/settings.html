@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Settings</title>
+    <link rel="icon" href="imgs/favicon/favicon.ico">
+    <meta name="keywords" content="settings account preferences information">
+    <meta name="description" content="Customize your Rent Rawr experience by adjusting your settings.">
+    <meta name="author" content="Benjamin Smith">
+    <meta name="robots" content="all">
+    <meta name="copyright" content="Copyright © 2024 RentRawr">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/account.css">
+    <link rel="stylesheet" href="./styles/settings.css">
+    <script src="https://kit.fontawesome.com/8bd26b406d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<header class="frsb">
+    <a id="homenav" href="explore-properties.html"><span id="rent">Rent</span><span id="rawr">Rawr</span><a><!--Logo/Home Navigator-->
+    <nav>
+        <!--Messages(dropdown)-->
+        <a id="msgLink" href="messages.html"><i class="fa-regular fa-message"></i></a>
+        <!--Account Relevant Menu-->
+        <a id="accountLink" href="#"><i class="fa-regular fa-user"></i></a>
+        <div id="accountMenu" class="menu">
+            <a id="loginBtn" class="btn" href="login.html">Login</a>
+            <a id="createAccount" class="btn" href="create-account.html">Create Account</a>
+
+            <div id="userFName" class="userData"></div>
+            <div id="userLName" class="userData"></div>
+
+            <a id="toAccount" class="btn" href="account.html">Account</a>
+
+            <a id="settings" class="btn" href="settings.html">Settings</a>
+            <a id="logOut" class="btn" href="login.html">Log Out</a>
+        </div>
+    </nav>
+</header>
+<main id="settingsOpen">
+    <aside id="accountLinkArea">
+        <div id="userPhoto"></div>
+        <div id="links">
+            <a id="myProperty" class="links" href="account.html">My Property</a>
+            <a id="workReq" class="links" href="work-request.html">Submit Work Request</a>
+            <a id="settings" class="links" href="settings.html">Settings</a>
+        </div>
+    </aside>
+    <!--Navigation-->
+    <!-------------------------->
+    <!--Main Area-->
+    <section>
+        <div id="settingSelection">
+            <div id="selectSettings" onclick="navSwitch('Settings')">Settings</div>
+            <div id="selectMyInfo" onclick="navSwitch('Info')">My Information</div>
+        </div>
+        <!--------------------------->
+        <form action="thank-you.html" id="settingsOptions">
+            <div id="accountType">
+                <h2>Account Type</h2>
+                <span>
+                    <input id="Tennant" type="radio">
+                    <label for="Tennant">Tennant</label>
+                </span>
+                <span>
+                    <input id="Landlord" type="radio">
+                    <label for="Landlord">Landlord</label>
+                </span>
+            </div>
+            <div id="notifications">
+                <h2>Notification Preferences</h2>
+                <span>
+                    <input id="marketing" type="checkbox">
+                    <label for="marketing">Marketing</label>
+                </span>
+                <span>
+                    <input id="payments" type="checkbox">
+                    <label for="payments">Upcoming Rent Payments</label>
+                </span>
+            </div>
+            <input id="updateSettings" type="submit" value="Update Settings">
+        </form>
+        <!--------------------->
+        <form action="thank-you.html" id="myInfoOptions">
+            <div id="name">
+                <h2>Name</h2>
+                <span>
+                    <label for="fName">First Name:</label>
+                    <input type="text" id="fName" value="" placeholder="">
+                </span>
+                <span>
+                    <label for="lName">Last Name:</label>
+                    <input type="text" id="lName" value="" placeholder="">
+                </span>
+            </div>
+            <div id="contactInfo">
+                <h2>Contact Info</h2>
+                <span>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email">
+                </span>
+                <span>
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone">
+                </span>
+            </div>
+            <div id="personalInfo">
+                <h2>Personal Information</h2>
+                    <h3>Date of Birth</h3>
+                    <span>
+                        <label for="day">day:</label>
+                        <input type="date" id="email">
+                    </span>
+            </div>
+            <input id="updateInfo" type="submit" value="Update My Info">
+        </form>
+
+
+
+
+
+
+
+
+    </section>
+</main>
+<footer>
+    <nav>
+        <a href="../index.html">Index</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+    </nav>
+    <div id="currentTime">this is the time</div>
+</footer>
+
+<script src="./js/main.js"></script>
+<script src="./js/account.js"></script>
+<script src="./js/settings.js"></script>
+
+</body>
+</html>

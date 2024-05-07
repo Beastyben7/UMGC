@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages</title>
+    <link rel="icon" href="imgs/favicon/favicon.ico">
+    <meta name="keywords" content="message contacts landlord communicate">
+    <meta name="description" content="Communicate with other users on Rent Rawr.">
+    <meta name="author" content="Benjamin Smith">
+    <meta name="robots" content="all">
+    <meta name="copyright" content="Copyright © 2024 RentRawr">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/messages.css">
+    <script src="https://kit.fontawesome.com/8bd26b406d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="frsb">
+        <a id="homenav" href="explore-properties.html"><span id="rent">Rent</span><span id="rawr">Rawr</span><a><!--Logo/Home Navigator-->
+        <nav>
+            <!--Messages(dropdown)-->
+            <a id="msgLink" href="#"><i class="fa-regular fa-message"></i></a>
+            <div id="msgPreviews" class="menu">
+                <a href="messages.html">view all mesages</a>
+                <div class="msg-preview">preview1</div>
+                <div class="msg-preview">preview2</div>
+                <div class="msg-preview">preview3</div>
+            </div>
+            <!--Account Relevant Menu-->
+            <a id="accountLink" href="#"><i class="fa-regular fa-user"></i></a>
+            <div id="accountMenu" class="menu">
+                <a id="loginBtn" class="btn" href="login.html">Login</a>
+                <a id="createAccount" class="btn" href="create-account.html">Create Account</a>
+
+                <div id="userFName" class="userData"></div>
+                <div id="userLName" class="userData"></div>
+
+                <a id="toAccount" class="btn" href="account.html">Account</a>
+
+                <a id="settings" class="btn" href="settings.html">Settings</a>
+                <a id="logOut" class="btn" href="login.html">Log Out</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <aside id="contacts"><!--Left half of screen; max width set; on mobile, turns into a popout-->
+            <div class="contact" id="contact2">
+                <div class="contactPicture contact2img"></div>
+                <div class="nameAndPreview">
+                    <div class="name">Jason Nixon</div>
+                    <div class="preview">Hello, would you be interested in renting this property? I can give you a limited time discount! What do you think?</div>
+                </div>
+            </div>
+            <div class="contact currentSelection" id="contact1">
+                <div class="contactPicture contact1img"></div>
+                <div class="nameAndPreview">
+                    <div class="name">Veronica Baylee</div>
+                    <div class="preview">Veronica: It's a great neighborhood. Everyone is super freindly in this area!</div>
+                </div>
+            </div>
+        </aside>
+        <div id="messaging">
+            <!--CONTACT OVERVIEW HEADER-->
+            <div id="headDetails">
+                <div class="recipientPicture contact1img"></div>
+                <div class="name">Veronica Baylee</div>
+            </div>
+            <!--MESSAGES-->
+            <div id="messages">
+                <div class="message recieved">
+                    <div class="recipientPicture contact1img"></div>
+                    <div class="msg">Hello, I see you are interested in my property.  Do you have any questions about it?</div>
+                    <div class="dateAndTimeSent">3 May - 6:53PM</div>
+                </div>
+                <div class="message sent">
+                    <div class="msg">Yeah, I'm interested</div>
+                    <div class="dateAndTimeSent">4 May - 10:40AM</div>
+                </div>
+                <div class="message sent">
+                    <div class="msg">What's the neighborhood like?</div>
+                    <div class="dateAndTimeSent">4 May - 10:43AM</div>
+                </div>
+                <div class="message recieved">
+                    <div class="recipientPicture contact1img"></div>
+                    <div class="msg">It's a great neighborhood. Everyone is super freindly in this area!</div>
+                    <div class="dateAndTimeSent">4 May - 2:12PM</div>
+                </div>
+            </div>
+            <!--USER INPUT-->
+            <div id="userTypeBar">
+                <input id="textToSend" type="text">
+                <a href="#" id="sendMessage"><i class="fa-regular fa-paper-plane"></i></a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <nav>
+            <a href="../index.html">Index</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+        </nav>
+        <div id="currentTime">this is the time</div>
+    </footer>
+    <script src="./js/main.js"></script>
+    <script src="./js/messages.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <link rel="icon" href="imgs/favicon/favicon.ico">
+    <meta name="keywords" content="account details property my information rent payment landlord ">
+    <meta name="description" content="View your current property and all of it's information. Track your next payment and message your landlord.">
+    <meta name="author" content="Benjamin Smith">
+    <meta name="robots" content="all">
+    <meta name="copyright" content="Copyright © 2024 RentRawr">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/account.css">
+    <script src="https://kit.fontawesome.com/8bd26b406d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="frsb">
+        <a id="homenav" href="explore-properties.html"><span id="rent">Rent</span><span id="rawr">Rawr</span><a><!--Logo/Home Navigator-->
+        <nav>
+            <!--Messages(dropdown)-->
+            <a id="msgLink" href="messages.html"><i class="fa-regular fa-message"></i></a>
+            <!--Account Relevant Menu-->
+            <a id="accountLink" href="#"><i class="fa-regular fa-user"></i></a>
+            <div id="accountMenu" class="menu">
+                <a id="loginBtn" class="btn" href="login.html">Login</a>
+                <a id="createAccount" class="btn" href="create-account.html">Create Account</a>
+
+                <div id="userFName" class="userData"></div>
+                <div id="userLName" class="userData"></div>
+
+                <a id="toAccount" class="btn" href="account.html">Account</a>
+
+                <a id="settings" class="btn" href="settings.html">Settings</a>
+                <a id="logOut" class="btn" href="login.html">Log Out</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <aside id="accountLinkArea">
+            <div id="userPhoto"></div>
+            <div id="links">
+                <a id="myProperty" class="links" href="account.html">My Property</a>
+                <a id="workReq" class="links" href="work-request.html">Submit Work Request</a>
+                <a id="settings" class="links" href="settings.html">Settings</a>
+            </div>
+        </aside>
+        <!---------------------------->
+        <section>
+            <div id="propertyImg"></div>
+            <div id="nextPymt">
+                <h2>Current Rent: <span id="currentRent">$3,700</span></h2>
+                <h2>Next Payment: <span id="dateNextPayment">May 18th</span></h2>
+                <div id="owner">
+                    <h2>Owner:</h2>
+                    <div id="ownerDetails" onclick='navOwner()'>
+                        <div id="ownerImg"></div>
+                        <div id="ownerName">Veronica Baylee</div>
+                    </div>
+                </div>
+            </div>
+            <div id="propertyData">
+                <h1>Luxury Apartment</h1>
+                <h2>2,560sqft</h2>
+                <div>
+                    <h2>Rooms</h2>
+                        <h3>1 Bedroom</h3>
+                        <h3>2 Bathrooms</h3>
+                        <h3>1 Kitchen</h3>
+                        <h3>3 Living Rooms</h3>
+                </div>
+                <div>
+                    <h2>Description:</h2>
+                    <p>This luxury appartment rests directly in the busiest part of Dallas. This luxury appartment includes lavish furnishings at no additional cost. Our staff perform weekly cleaning services.</p>
+                </div>
+                <div>
+                    <h2>Pets:</h2>
+                        <h3>Cats are okay</h3>
+                        <h3>Dogs are okay</h3>    
+                </div>
+                
+            </div>
+        </section>
+    </main>
+    <footer>
+        <nav>
+            <a href="../index.html">Index</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+        </nav>
+        <div id="currentTime">this is the time</div>
+    </footer>
+    <script src="./js/main.js"></script>
+    <script src="./js/account.js"></script>
+
+</body>
+</html>
