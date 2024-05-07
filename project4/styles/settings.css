@@ -1,0 +1,43 @@
+#settingSelection {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  padding: 4px;
+  background-color: #888;
+}
+#settingSelection div {
+  padding: 4px 12px;
+  border: 2px solid black;
+  border-radius: 4px;
+  background-color: #eee;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding-left: 12px;
+}
+form div {
+  display: flex;
+  flex-direction: column;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+form h2 {
+  padding-top: 4px;
+}
+
+#myInfoOptions {
+  display: none;
+}
+
+#updateSettings, #updateInfo {
+  margin: 12px;
+  padding: 4px 12px;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+}/*# sourceMappingURL=settings.css.map */

@@ -1,0 +1,27 @@
+section {
+  padding: 8px 16px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+}
+form div {
+  display: flex;
+  flex-direction: column;
+}
+form div label {
+  font-size: larger;
+  margin-top: 8px;
+}
+form div textarea {
+  resize: vertical;
+}
+form #workReqSubmit {
+  margin-top: 8px;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 4px 12px;
+  align-self: center;
+}/*# sourceMappingURL=work-req.css.map */

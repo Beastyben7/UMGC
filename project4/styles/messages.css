@@ -1,0 +1,169 @@
+main {
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - 96px);
+  overflow-y: hidden;
+}
+main .contact1img {
+  background-image: url(../imgs/contacts/contact1.jpg);
+  background-size: cover;
+  border: 2px solid black;
+}
+main .contact2img {
+  background-image: url(../imgs/contacts/contact2.jpg);
+  background-size: cover;
+  border: 2px solid black;
+}
+main .contact3img {
+  background-image: url(../imgs/contacts/contact3.jpg);
+  background-size: cover;
+  border: 2px solid black;
+}
+main .contact4img {
+  background-image: url(../imgs/contacts/contact4.jpg);
+  background-size: cover;
+  border: 2px solid black;
+}
+main #contacts {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  text-decoration: none;
+  align-self: center;
+  height: 100%;
+  overflow-y: scroll;
+  border-right: 2px solid black;
+}
+main #contacts .contact {
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  background-color: #ccc;
+  overflow: hidden;
+  outline: 2px solid gray;
+  cursor: pointer;
+}
+main #contacts .contact.currentSelection {
+  background-color: #aaa;
+}
+main #contacts .contact .contactPicture {
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  margin: 10px;
+  border-radius: 10px;
+}
+main #contacts .contact .nameAndPreview {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  margin-block: 12px;
+}
+main #contacts .contact .nameAndPreview .preview {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  max-height: 3.6em;
+  color: #444;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  padding-right: 8px;
+}
+main .name {
+  font-weight: bold;
+  height: auto;
+}
+main #messaging {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+main #messaging .recipientPicture {
+  width: 42px;
+  min-width: 42px;
+  height: 42px;
+  border-radius: 8px;
+}
+main #messaging #headDetails {
+  display: flex;
+  flex-direction: row;
+  background-color: #aaa;
+  padding: 8px;
+  gap: 16px;
+  align-items: center;
+  border-bottom: 2px solid black;
+}
+main #messaging #messages {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+main #messaging #messages .message {
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  align-items: end;
+  width: 100%;
+}
+main #messaging #messages .message .msg {
+  max-width: 60%;
+  border-radius: 6px;
+  padding: 4px 8px 6px;
+  border: 2px solid black;
+}
+main #messaging #messages .message .dateAndTimeSent {
+  color: #444;
+}
+main #messaging #messages .recieved {
+  flex-direction: row;
+  background-color: #eee;
+}
+main #messaging #messages .recieved .msg {
+  background-color: white;
+}
+main #messaging #messages .sent {
+  flex-direction: row-reverse;
+  background-color: #ccc;
+}
+main #messaging #messages .sent .msg {
+  background-color: white;
+}
+main #messaging #userTypeBar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px;
+  gap: 8px;
+  width: 100%;
+  background-color: #aaa;
+  border-top: 2px solid black;
+}
+main #messaging #userTypeBar #textToSend {
+  width: 100%;
+  height: 40px;
+  font-size: 24px;
+  padding-inline: 4px;
+}
+main #messaging #userTypeBar #sendMessage {
+  display: block;
+  width: 60px;
+  height: 40px;
+  font-size: 28px;
+  text-align: center;
+  color: black;
+  padding: auto;
+  background-color: #ccc;
+  border: 2px solid black;
+  border-radius: 4px;
+}
+main #messaging #userTypeBar #sendMessage:hover {
+  background-color: #eee;
+}
+main #messaging #userTypeBar #sendMessage:active {
+  background-color: #aaa;
+}/*# sourceMappingURL=messages.css.map */

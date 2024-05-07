@@ -1,0 +1,69 @@
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-image: url(../imgs/login-background.jpg);
+  background-size: cover;
+  background-position: center;
+  flex: 1;
+  height: calc(100vh - 96px);
+  overflow-y: hidden;
+}
+
+#propertyDetails {
+  display: flex;
+  flex-direction: column;
+  min-width: 250px;
+  max-width: 500px;
+  background-color: #ccc;
+  overflow-y: scroll;
+}
+
+#imageArea {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: green;
+  border: 2px solid black;
+}
+#imageArea #mainImage {
+  width: 100%;
+  border-bottom: 2px solid black;
+}
+#imageArea #allImages {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  overflow-x: scroll;
+}
+#imageArea #allImages img {
+  width: 125px;
+  cursor: pointer;
+  outline: 2px solid gray;
+}
+
+#propertyInfo {
+  margin: 10px;
+}
+#propertyInfo h1 {
+  margin-bottom: 10px;
+}
+#propertyInfo h2 {
+  margin-bottom: 6px;
+}
+#propertyInfo h3 {
+  margin-bottom: 2px;
+}
+
+#contactOwner {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 8px 16px;
+  align-self: center;
+  background-color: #198a64;
+  border: 2px solid black;
+  border-radius: 4px;
+  color: white;
+  text-decoration: none;
+  margin-block: 16px;
+}/*# sourceMappingURL=property-details.css.map */

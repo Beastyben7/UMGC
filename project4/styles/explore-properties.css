@@ -1,0 +1,201 @@
+#explore-properties {
+  display: flex;
+  flex-direction: row;
+  background-color: lightblue;
+  flex: 1;
+  height: calc(100vh - 96px);
+  overflow-y: hidden;
+}
+#explore-properties #filters {
+  flex: 2;
+  min-width: 200px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-color: #ccc;
+  border-right: 2px solid black;
+}
+#explore-properties #filters [id^=filter] {
+  background-color: #aaa;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 4px;
+  text-decoration: none;
+  color: black;
+  border-bottom: 2px solid gray;
+}
+#explore-properties #filters [id^=dropdown] {
+  display: flex;
+  flex-direction: column;
+  display: none;
+  background-color: #eee;
+  padding: 4px;
+  border-bottom: 2px solid black;
+}
+#explore-properties #filters [id^=dropdown] div.filter-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#explore-properties #filterClose {
+  text-decoration: none;
+  align-self: center;
+  justify-content: space-around;
+  background-color: rgb(128, 255, 0);
+  color: black;
+  padding: 16px 4px 18px;
+  border: 2px solid black;
+  border-left: none;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  position: absolute;
+  left: 0px;
+  top: 36px;
+}
+#explore-properties #filterClose:hover {
+  background-color: green;
+}
+#explore-properties #resultsClose {
+  text-decoration: none;
+  align-self: center;
+  justify-content: space-around;
+  background-color: rgb(128, 255, 0);
+  color: black;
+  padding: 16px 4px 18px;
+  border: 2px solid black;
+  border-right: none;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  position: absolute;
+  right: 0px;
+  top: 36px;
+}
+#explore-properties #resultsClose:hover {
+  background-color: green;
+}
+#explore-properties #map-container {
+  width: auto;
+  height: calc(100vh - 96px);
+  position: relative;
+  overflow: hidden;
+}
+#explore-properties #map-container #map {
+  position: sticky;
+  overflow: auto;
+}
+#explore-properties #map-container div.search {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: 4px;
+}
+#explore-properties #map-container div.search form input {
+  box-shadow: 0px 1px 2px;
+}
+#explore-properties #map-container div.search form #searchbar {
+  border-radius: 8px;
+  padding: 4px;
+  padding-left: 6px;
+}
+#explore-properties #map-container div.search form #submit {
+  padding: 4px;
+}
+#explore-properties #resultsContainer {
+  display: flex;
+  flex-direction: column;
+  min-width: 275px;
+  max-width: 700px;
+  padding: 8px;
+  background-color: #ccc;
+  border-left: 2px solid black;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: relative;
+}
+#explore-properties #resultsContainer #resultCount {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+#explore-properties #resultsContainer #results {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+#explore-properties #resultsContainer #results .resultCard {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 250px;
+  background-color: #198a64;
+  border: 2px solid black;
+  border-radius: 8px;
+  cursor: pointer;
+}
+#explore-properties #resultsContainer #results .resultCard .imgContainer {
+  display: block;
+  position: relative;
+}
+#explore-properties #resultsContainer #results .resultCard .imgContainer img {
+  border-radius: 6px;
+}
+#explore-properties #resultsContainer #results .resultCard .imgContainer a {
+  text-decoration: none;
+  align-self: center;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  color: #ddd;
+  font-size: 36px;
+}
+#explore-properties #resultsContainer #results .resultCard .imgContainer a i {
+  margin: 2px 4px;
+  color: rgb(128, 255, 0);
+  font-size: 24px;
+}
+#explore-properties #resultsContainer #results .resultCard .cardUpper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 4px;
+}
+#explore-properties #resultsContainer #results .resultCard .cardUpper .price {
+  font-weight: bold;
+}
+#explore-properties #resultsContainer #results .resultCard .cardUpper div {
+  display: flex;
+  flex-direction: row;
+}
+#explore-properties #resultsContainer #results .resultCard .cardUpper div div {
+  padding-left: 8px;
+}
+#explore-properties #resultsContainer #results .resultCard .cardUpper i {
+  text-decoration: none;
+  align-self: center;
+  color: black;
+  font-size: 16px;
+  padding-left: 1px;
+}
+#explore-properties #resultsContainer #results .resultCard .lower {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 4px;
+}
+
+.rentbox {
+  width: auto;
+  max-width: 70px;
+  margin: 4px;
+}
+
+input[type=submit] {
+  background-color: rgb(128, 255, 0);
+  border-radius: 4px;
+}
+
+main {
+  overflow: hidden;
+}/*# sourceMappingURL=explore-properties.css.map */

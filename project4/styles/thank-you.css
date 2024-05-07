@@ -1,0 +1,19 @@
+#thanks {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  background-color: #198a64;
+  border: 2px solid rgb(128, 255, 0);
+  border-radius: 20px;
+  padding: 20px;
+}
+#thanks a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: #ccc;
+  border: 2px solid rgb(128, 255, 0);
+  border-radius: 10px;
+  padding: 8px 16px;
+}/*# sourceMappingURL=thank-you.css.map */
